@@ -14,7 +14,7 @@ The app will log the following data to InfluxDB:
   
 ## Application Configuration
 
-In the **src/** directory, rename file **configuration_template.h** to **configuration.h**. Edit file and set configuration values as described in section below. Enable configuration by uncommenting *setConfigurationPreferences()* in the *setup()* method in **main.cpp** file. Configuration properties will then be persisted to nvram memory and will be used during startup of board.
+In the **src/** directory, rename file **configuration_template.h** to **configuration.h**. Edit file and set configuration values as described in the section below. Enable configuration by uncommenting *setConfigurationPreferences()* in the *setup()* method in **main.cpp** file. Configuration properties will then be persisted to nvram memory and will be used during startup.
 
 Add the following values:
 

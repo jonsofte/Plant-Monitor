@@ -3,9 +3,9 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Simple sketch for monitoring of plants with the [LILYGO® T-Higrow ESP32 board](https://www.banggood.com/LILYGO-T-Higrow-ESP32-WiFi-+-bluetooth-+-DHT11-Soil-Temperature-And-Humidity-Sensor-Module-p-1196250.html). For monitoring of my chilli plants with InfluxDB and Grafana. Project configuration and library dependencies is handled with [PlatformIO](https://platformio.org) VS Code extension.
+A simple sketch for monitoring of plants with the [LILYGO® T-Higrow ESP32 board](https://www.banggood.com/LILYGO-T-Higrow-ESP32-WiFi-+-bluetooth-+-DHT11-Soil-Temperature-And-Humidity-Sensor-Module-p-1196250.html). Created for monitoring of my chilli plants with InfluxDB and Grafana. The project configuration and library dependencies is handled with [PlatformIO](https://platformio.org) VS Code extension.
 
-Logs the following data:
+The app will log the following data to InfluxDB:
 
 * Air temperature and humidity
 * Light amount
@@ -14,7 +14,7 @@ Logs the following data:
   
 ## Application Configuration
 
-In **src/** directory, rename file **configuration_template.h** to **configuration.h**. Edit file and set configuration values as described in section below. Enable setting of configuration by uncommenting *setConfigurationPreferences()* in the *setup()* method in **main.cpp** file. Values will be persisted to Preferences nvram memory on chip.
+In the **src/** directory, rename file **configuration_template.h** to **configuration.h**. Edit file and set configuration values as described in section below. Enable configuration by uncommenting *setConfigurationPreferences()* in the *setup()* method in **main.cpp** file. Configuration properties will then be persisted to nvram memory and will be used during startup of board.
 
 Add the following values:
 

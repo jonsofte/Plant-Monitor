@@ -134,7 +134,7 @@ void sendToInfluxDB(int waterlevel, float humidity, float temperature, float lux
   Data.concat(timeClient.getEpochTime());
   
   http.setReuse(true);
-  http.begin("10.0.0.93",8086,_InfluxURI);
+  http.begin(_influxDBHost,_influxDBPort,_InfluxURI);
   http.addHeader("Content-Type", "text/plain");  
   int httpCode = http.POST(Data);      
   http.end();
